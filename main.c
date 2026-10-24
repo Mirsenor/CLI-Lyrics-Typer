@@ -62,6 +62,7 @@ int main(int argc, char *argv[]) {
             char_delay = atoi(delay_string);
             free(delay_string);
             current_char += delay_size + 2;
+            continue;
         }
         else if (text[current_char] == SET_PAUSE) {
             bool scan_pause_size_loop = true;
@@ -88,6 +89,7 @@ int main(int argc, char *argv[]) {
             free(pause_string);
             pause_time = temp_clock;
             current_char += pause_size + 2;
+            continue;
         }
 
         if (pause > 0) {
